@@ -15,13 +15,6 @@ export default function Home() {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const menuItems = [
-    { id: 1, name: "Google", href: "#" },
-    { id: 2, name: "Facebook Ads", href: "#" },
-    { id: 3, name: "SEO", href: "#" },
-    { id: 4, name: "Training", href: "#" },
-  ];
-
   const toggleMobileMenu = () => setIsMobileMenu(prev => !prev);
   const toggleDropdown = () => setIsDropdownOpen(prev => !prev);
   const hideMenu = () => setIsMobileMenu(false);
@@ -58,11 +51,18 @@ export default function Home() {
                 </button>
                 {isDropdownOpen && (
                   <ul className="pl-4 mt-2 space-y-2 bg-gray-100 rounded-md">
-                    {menuItems.map(item => (
-                      <li key={item.id}>
-                        <Link href={item.href} className="text-sm hover:bg-gray-200 block px-4 py-2">{item.name}</Link>
-                      </li>
-                    ))}
+                    <li>
+                      <Link href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Google Adwords</Link>
+                    </li>
+                    <li>
+                      <Link href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Facebook Ads</Link>
+                    </li>
+                    <li>
+                      <Link href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">SEO</Link>
+                    </li>
+                    <li>
+                      <Link href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Training</Link>
+                    </li>
                   </ul>
                 )}
               </li>
@@ -77,7 +77,8 @@ export default function Home() {
           <ul className="flex flex-row gap-6">
             <li><Link href="#" className="hover:text-blue-500">Homepage</Link></li>
             <li><Link href="#" className="hover:text-blue-500">News</Link></li>
-            <li className="relative"
+            <li
+              className="relative"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
@@ -90,11 +91,18 @@ export default function Home() {
               {isDropdownOpen && (
                 <div className="absolute bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow mt-2 w-44">
                   <ul className="py-1">
-                    {menuItems.map(item => (
-                      <li key={item.id}>
-                        <Link href={item.href} className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">{item.name}</Link>
-                      </li>
-                    ))}
+                    <li>
+                      <Link href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Google Adwords</Link>
+                    </li>
+                    <li>
+                      <Link href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Facebook Ads</Link>
+                    </li>
+                    <li>
+                      <Link href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">SEO</Link>
+                    </li>
+                    <li>
+                      <Link href="#" className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Training</Link>
+                    </li>
                   </ul>
                 </div>
               )}
@@ -114,16 +122,16 @@ export default function Home() {
         <Contact />
       </main>
       <footer className="w-full bg-gray-900 text-white py-8 ">
-            <div className="flex flex-col items-center">
-                <p className="mb-2">© 2024 Perusahaan Anda. Semua hak dilindungi.</p>
-                <Link href="#" className="text-gray-300 hover:underline">
-                    Kebijakan Privasi
-                </Link>
-                <Link href="#" className="text-gray-300 hover:underline">
-                    Syarat dan Ketentuan
-                </Link>
-            </div>
-        </footer>
+        <div className="flex flex-col items-center">
+          <p className="mb-2">© 2024 Perusahaan Anda. Semua hak dilindungi.</p>
+          <Link href="#" className="text-gray-300 hover:underline">
+            Kebijakan Privasi
+          </Link>
+          <Link href="#" className="text-gray-300 hover:underline">
+            Syarat dan Ketentuan
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 }

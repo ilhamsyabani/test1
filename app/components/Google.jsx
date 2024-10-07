@@ -5,9 +5,9 @@ export default function Google({ }) {
     return (
         <section className="flex flex-col md:flex-row gap-6 w-full xl:w-[1200px] xl:mx-auto py-12 md:py-2 px-6  dark:text-gray-50">
             <img 
-                src="./images/image.png" 
+                src="./images/google.png" 
                 alt="contoh_gambar" 
-                className="w-full md:w-[120rem] h-auto object-cover rounded-sm"
+                className="w-[200rem] md:w-[28rem] h-auto object-cover rounded-sm"
             />
             <div className="flex-auto">
                 <h3 className="font-bold text-xl mb-4">Google Adwords</h3>

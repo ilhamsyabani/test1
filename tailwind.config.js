@@ -12,7 +12,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       backgroundImage: {
-        'hero-image': "url('images/hero-image.jpg')",
+        'hero-image': "url('images/hero.jpg')",
       },
     },
   },
